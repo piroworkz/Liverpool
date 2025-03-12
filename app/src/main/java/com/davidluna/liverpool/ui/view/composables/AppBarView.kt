@@ -97,7 +97,7 @@ fun AppBarView(
                     )
                 },
                 keyboardOptions = KeyboardOptions.Default.copy(
-                    autoCorrect = true,
+                    autoCorrectEnabled = true,
                     imeAction = ImeAction.Search,
                     keyboardType = KeyboardType.Text
                 ),

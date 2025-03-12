@@ -25,7 +25,7 @@ object AppModule {
     @Provides
     fun provideClient(
     ): OkHttpClient = HttpLoggingInterceptor().run {
-        level = HttpLoggingInterceptor.Level.NONE
+        level = HttpLoggingInterceptor.Level.BODY
         OkHttpClient.Builder()
             .addInterceptor(this)
             .build()
@@ -36,6 +36,7 @@ object AppModule {
     fun provideJsonConverter(): Json = Json {
         ignoreUnknownKeys = true
         isLenient = true
+        prettyPrint = true
     }
 
     @Singleton
